@@ -22,5 +22,10 @@ public class ExceptionHandler {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.LOCKED);
     }
 
+    @org.springframework.web.bind.annotation.ExceptionHandler
+    public ResponseEntity<?>handleException(ClientUnauthorizedEx e){
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
 
 }

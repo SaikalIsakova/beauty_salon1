@@ -23,6 +23,7 @@ public class Order {
     Date updateDate;
     Date appointmentDate;
     boolean active;
+    int confirmCode;
 
     @Enumerated(EnumType.STRING)
     OrderStatusEnum status;

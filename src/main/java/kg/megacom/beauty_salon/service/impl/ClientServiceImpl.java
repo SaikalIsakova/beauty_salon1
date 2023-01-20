@@ -27,7 +27,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public ClientDto findById(Long id) {
 
-        return mapper.toDto(rep.findById(id).orElseThrow(()->new RuntimeException("Клиент не найден")));
+        return mapper.toDto(rep.findById(id).orElseThrow(()->new NotFoundEx("Клиент не найден")));
     }
 
     @Override

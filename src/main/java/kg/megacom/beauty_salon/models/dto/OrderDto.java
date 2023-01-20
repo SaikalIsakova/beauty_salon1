@@ -18,6 +18,7 @@ public class OrderDto {
     Date updateDate;
     Date appointmentDate;
     boolean active;
+    int confirmCode;
     OrderStatusEnum status;
     ClientDto client;
     MasterDto master;

@@ -17,9 +17,9 @@ public class EmailController {
     @Autowired
     EmailSenderService emailSenderService;
 
-    @PostMapping("/send-email")
-    public ResponseEntity sendEmail(@RequestBody String email ) throws IOException, MessagingException {
-        this.emailSenderService.sendEmail(email);
-        return ResponseEntity.ok("Success");
-    }
+//    @PostMapping("/send-email")
+//    public ResponseEntity sendEmail(@RequestBody String email ) throws IOException, MessagingException {
+//        this.emailSenderService.sendEmail(email);
+//        return ResponseEntity.ok("Success");
+//    }
 }

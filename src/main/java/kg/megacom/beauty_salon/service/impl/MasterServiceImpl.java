@@ -1,6 +1,7 @@
 package kg.megacom.beauty_salon.service.impl;
 
 import kg.megacom.beauty_salon.dao.MasterRep;
+import kg.megacom.beauty_salon.exceptions.NotFoundEx;
 import kg.megacom.beauty_salon.mappers.MasterMapper;
 import kg.megacom.beauty_salon.models.dto.MasterDto;
 import kg.megacom.beauty_salon.models.dto.SalonDto;
@@ -29,7 +30,7 @@ public class MasterServiceImpl implements MasterService {
     @Override
     public MasterDto findById(Long id) {
 
-        return mapper.toDto(rep.findById(id).orElseThrow(()->new RuntimeException("Мастер не найден")));
+        return mapper.toDto(rep.findById(id).orElseThrow(()->new NotFoundEx("Мастер не найден")));
     }
 
     @Override
